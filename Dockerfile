@@ -23,8 +23,9 @@ RUN apt-get install -y \
   python3-pip \
   python3-apt
 
-# install gitlab-release
-RUN pip3 install gitlab-release
+# install kustomize
+RUN curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+RUN mv kustomize /usr/local/bin
 
 # install ansible
 RUN pip3 install \

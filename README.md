@@ -8,5 +8,5 @@ It included below items.
 * Golang
 * Git
 * Python3
-* Gitlab-release
 * GCC
+* Kustomize
