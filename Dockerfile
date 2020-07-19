@@ -1,9 +1,9 @@
-FROM google/cloud-sdk:282.0.0
+FROM google/cloud-sdk:300.0.0
 
 LABEL maintainer="Sungtae Kim <pchero@gmail.com>"
 
-ENV GOLANG_VERSION "1.14.1"
-ENV TERRAFORM_VERSION "0.12.20"
+ENV GOLANG_VERSION "1.14.6"
+ENV TERRAFORM_VERSION "0.12.28"
 
 # install common
 RUN apt-get update
@@ -12,6 +12,7 @@ RUN apt-get install -y \
     bash \
     gcc \
     openssl \
+    openssh-client \
     wget \
     unzip \
     git \
