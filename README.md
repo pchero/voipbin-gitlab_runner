@@ -10,3 +10,4 @@ It included below items.
 * Python3
 * GCC
 * Kustomize
+* alembic(https://alembic.sqlalchemy.org/en/latest/)

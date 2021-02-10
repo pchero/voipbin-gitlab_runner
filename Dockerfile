@@ -1,9 +1,9 @@
-FROM google/cloud-sdk:300.0.0
+FROM google/cloud-sdk:327.0.0
 
 LABEL maintainer="Sungtae Kim <pchero@gmail.com>"
 
-ENV GOLANG_VERSION "1.14.6"
-ENV TERRAFORM_VERSION "0.12.28"
+ENV GOLANG_VERSION "1.15.8"
+ENV TERRAFORM_VERSION "0.14.6"
 
 # install common
 RUN apt-get update
@@ -38,6 +38,9 @@ RUN pip3 install \
 RUN wget --quiet https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -P /tmp
 RUN unzip /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /tmp
 RUN mv /tmp/terraform /usr/local/bin
+
+# install alembic
+RUN pip3 install alembic
 
 # install golang
 RUN wget --quiet https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz -P /usr/local/src
