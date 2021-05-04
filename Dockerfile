@@ -3,7 +3,7 @@ FROM google/cloud-sdk:327.0.0
 LABEL maintainer="Sungtae Kim <pchero@gmail.com>"
 
 ENV GOLANG_VERSION "1.15.8"
-ENV TERRAFORM_VERSION "0.14.6"
+ENV TERRAFORM_VERSION "0.15.1"
 
 # install common
 RUN apt-get update
