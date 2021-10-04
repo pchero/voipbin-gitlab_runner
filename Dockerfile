@@ -52,5 +52,6 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 
 WORKDIR $GOPATH
 
+# install golint
 RUN go get -u golang.org/x/lint/golint
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh

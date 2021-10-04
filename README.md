@@ -1,5 +1,5 @@
 # voipbin-gitlab_runner
-Basic gitlab-runner for voipbin
+Basic gitlab-runner for voipbin.
 
 It included below items.
 * GCP SDK
