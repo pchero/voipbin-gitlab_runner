@@ -11,3 +11,8 @@ It included below items.
 * GCC
 * Kustomize
 * alembic(https://alembic.sqlalchemy.org/en/latest/)
+
+# deploy
+
+* docker build -t voipbin/gitlab-runner:latest .
+* docker push voipbin/gitlab-runner:latest

@@ -49,6 +49,7 @@ RUN tar -C /usr/local -xzf /usr/local/src/go${GOLANG_VERSION}.linux-amd64.tar.gz
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
+RUN go version
 
 WORKDIR $GOPATH
 
