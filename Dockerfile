@@ -4,6 +4,7 @@ LABEL maintainer="Sungtae Kim <pchero@gmail.com>"
 
 ENV GOLANG_VERSION "1.17"
 ENV TERRAFORM_VERSION "1.0.8"
+ENV GOLANGCILINT_VERSION "v1.42.1"
 
 # install common
 RUN apt-get update
@@ -56,3 +57,7 @@ WORKDIR $GOPATH
 # install golint
 RUN go get -u golang.org/x/lint/golint
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+
+# install golangci-lint
+RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin ${GOLANGCILINT_VERSION}
+RUN golangci-lint --version

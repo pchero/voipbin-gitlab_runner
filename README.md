@@ -14,5 +14,7 @@ It included below items.
 
 # deploy
 
+* docker build -t voipbin/gitlab-runner:release-20211004 .
 * docker build -t voipbin/gitlab-runner:latest .
+* docker push voipbin/gitlab-runner:release-20211004
 * docker push voipbin/gitlab-runner:latest
