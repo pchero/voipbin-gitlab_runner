@@ -1,10 +1,10 @@
-FROM google/cloud-sdk:359.0.0
+FROM google/cloud-sdk:394.0.0
 
 LABEL maintainer="Sungtae Kim <pchero@gmail.com>"
 
-ENV GOLANG_VERSION "1.17"
-ENV TERRAFORM_VERSION "1.0.8"
-ENV GOLANGCILINT_VERSION "v1.42.1"
+ENV GOLANG_VERSION "1.18.4"
+ENV TERRAFORM_VERSION "1.2.5"
+ENV GOLANGCILINT_VERSION "v1.47.1"
 
 # install common
 RUN apt-get update
@@ -55,7 +55,7 @@ RUN go version
 WORKDIR $GOPATH
 
 # install golint
-RUN go get -u golang.org/x/lint/golint
+RUN go install golang.org/x/lint/golint@latest
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 # install golangci-lint
