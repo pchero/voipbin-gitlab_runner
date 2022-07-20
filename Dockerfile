@@ -17,7 +17,8 @@ RUN apt-get install -y \
     wget \
     unzip \
     git \
-    apt-utils
+    apt-utils \
+    google-cloud-sdk-gke-gcloud-auth-plugin
 
 # install python
 RUN apt-get install -y \
