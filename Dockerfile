@@ -1,10 +1,10 @@
-FROM google/cloud-sdk:394.0.0
+FROM google/cloud-sdk:427.0.0
 
 LABEL maintainer="Sungtae Kim <pchero@gmail.com>"
 
-ENV GOLANG_VERSION "1.18.4"
-ENV TERRAFORM_VERSION "1.2.5"
-ENV GOLANGCILINT_VERSION "v1.47.1"
+ENV GOLANG_VERSION "1.20.3"
+ENV TERRAFORM_VERSION "1.4.5"
+ENV GOLANGCILINT_VERSION "v1.52.2"
 
 # install common
 RUN apt-get update
@@ -17,8 +17,7 @@ RUN apt-get install -y \
     wget \
     unzip \
     git \
-    apt-utils \
-    google-cloud-sdk-gke-gcloud-auth-plugin
+    apt-utils
 
 # install python
 RUN apt-get install -y \
