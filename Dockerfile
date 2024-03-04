@@ -1,10 +1,10 @@
-FROM google/cloud-sdk:427.0.0
+FROM google/cloud-sdk:466.0.0
 
 LABEL maintainer="Sungtae Kim <pchero@gmail.com>"
 
-ENV GOLANG_VERSION "1.20.3"
-ENV TERRAFORM_VERSION "1.4.5"
-ENV GOLANGCILINT_VERSION "v1.52.2"
+ENV GOLANG_VERSION "1.22.0"
+ENV TERRAFORM_VERSION "1.7.4"
+ENV GOLANGCILINT_VERSION "v1.56.2"
 
 # install common
 RUN apt-get update
